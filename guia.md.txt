@@ -1,0 +1,121 @@
+# Studio Barbosa Beauty - Back-end 💅
+
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
+## 📄 Sobre o Projeto
+
+Este repositório contém o código-fonte do back-end para o sistema de agendamento do **Studio Barbosa Beauty**. A aplicação é desenvolvida em Python com o framework Django e serve como uma API RESTful para gerenciar serviços, clientes e agendamentos para o aplicativo do estúdio.
+
+---
+
+## ✨ Tecnologias Principais
+
+- **Python:** Linguagem de programação principal.
+- **Django:** Framework web para o desenvolvimento rápido e seguro.
+- **Django REST Framework:** Toolkit para a construção de APIs Web.
+- **SQLite3:** Banco de dados padrão para o ambiente de desenvolvimento.
+
+---
+
+## 🚀 Começando
+
+Siga os passos abaixo para configurar e rodar o projeto em sua máquina local.
+
+### Pré-requisitos
+
+Antes de começar, garanta que você tenha os seguintes softwares instalados:
+
+- **Python** (versão 3.8 ou superior)
+  - _**Importante (Windows):** Durante a instalação, marque a caixa **"Add Python to PATH"**._
+- **Git**
+
+### Guia de Instalação
+
+1.  **Clone o repositório**
+    Abra seu terminal e clone o projeto em um diretório de sua preferência.
+    ```bash
+    # Clone o repositório
+    git clone <URL_DO_SEU_REPOSITORIO_GIT>
+
+    # Entre na pasta do projeto
+    cd barbosa-beauty-backend
+    ```
+
+2.  **Crie e ative o ambiente virtual (`venv`)**
+    Isso cria um ambiente isolado para as dependências do projeto, evitando conflitos.
+
+    - **No Windows (CMD / PowerShell):**
+      ```bash
+      # Cria o ambiente virtual
+      python -m venv venv
+
+      # Ativa o ambiente
+      venv\Scripts\activate
+      ```
+
+    - **No macOS / Linux:**
+      ```bash
+      # Cria o ambiente virtual
+      python3 -m venv venv
+
+      # Ativa o ambiente
+      source venv/bin/activate
+      ```
+    Após a ativação, você verá `(venv)` no início da linha do seu terminal.
+
+3.  **Instale as dependências**
+    Com o ambiente virtual ativo, instale todas as bibliotecas necessárias listadas no arquivo `requirements.txt`.
+    ```bash
+    pip install -r requirements.txt
+    ```
+    > **Nota:** Se você for o primeiro a configurar o projeto, crie este arquivo com `pip freeze > requirements.txt` após instalar o Django.
+
+4.  **Execute as migrações do banco de dados**
+    Este comando cria as tabelas necessárias no banco de dados com base nos modelos definidos no código.
+    ```bash
+    python manage.py migrate
+    ```
+
+5.  **Crie um superusuário**
+    Para acessar o painel de administração do Django, você precisa de um usuário administrador.
+    ```bash
+    python manage.py createsuperuser
+    ```
+    Siga as instruções para definir um nome de usuário, e-mail e senha.
+
+---
+
+## ▶️ Rodando a Aplicação
+
+Com tudo configurado, inicie o servidor de desenvolvimento.
+
+```bash
+python manage.py runserver
+```
+
+O servidor estará rodando em `http://127.0.0.1:8000/`.
+
+- **API Principal:** [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+- **Painel de Administração:** [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) (faça login com os dados do superusuário).
+
+---
+
+## 🔧 Comandos Úteis
+
+```bash
+# Ativar o ambiente virtual (Windows)
+venv\Scripts\activate
+
+# Instalar/atualizar dependências
+pip install -r requirements.txt
+
+# Rodar migrações do banco de dados
+python manage.py migrate
+
+# Iniciar o servidor de desenvolvimento
+python manage.py runserver
+
+# Criar um novo arquivo de requirements.txt
+pip freeze > requirements.txt
+```
