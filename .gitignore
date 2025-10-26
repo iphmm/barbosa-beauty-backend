@@ -1,0 +1,16 @@
+# Ambiente Virtual
+venv/
+
+# Arquivos compilados do Python
+__pycache__/
+*.pyc
+
+# Banco de dados de desenvolvimento
+db.sqlite3
+*.sqlite3
+
+# Pasta de uploads (mídia) - Cada desenvolvedor terá a sua localmente
+/media/
+
+# Arquivos de IDEs e editores
+.vscode/

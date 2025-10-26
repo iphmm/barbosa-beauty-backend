@@ -19,8 +19,24 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Qualquer URL que comece com 'api/' será redirecionada para o arquivo urls.py da nossa app
     path('api/', include('appointments.urls')),
+
+    path('admin/', admin.site.urls),
+    
+    # Nossas URLs de apps (Serviços, Endereços, etc.)
+    path('api/', include('appointments.urls')),
+    
+    # URL de Login/Logout da API Navegável (para nós)
+    path('api-auth/', include('rest_framework.urls')),
+
+    # --- ADICIONE AS DUAS LINHAS ABAIXO ---
+    # URLs do Djoser (Registro, Reset de Senha, etc.)
+    path('api/auth/', include('djoser.urls')),
+    # URLs de Token do Djoser (Login / Logout por Token)
+    path('api/auth/', include('djoser.urls.authtoken')),
 ]
+
